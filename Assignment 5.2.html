@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Assignment 5.2</title>
+</head>
+<body>
+<input type="text" id="character"/>
+<button onclick="vowel_count(document.getElementById('character').value)">Submit</button>
+</body>
+<script type="text/javascript">
+	function vowel_count(word)
+	{
+	 var vowels = 'aeiouAEIOU';											/*Vowels list*/
+	 var consonents = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';		/*Consonents list*/
+	 var vcount = 0;
+	 var ccount=0;
+	 for(var x = 0; x <word.length ; x++)
+	 {
+		if (vowels.indexOf(word[x]) !== -1)						/*Look for existence of vowels in the string*/
+		{
+		 	vcount += 1;
+		}
+		else if(consonents.indexOf(word[x]) !== -1)				/*Look for existence of consonents in the string*/
+		{
+			ccount+=1;
+		}	
+	 }
+	 alert('Number of vowels is '+vcount+' and number of consonents is '+ccount);
+	}
+</script>
+</html>
